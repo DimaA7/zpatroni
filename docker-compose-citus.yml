@@ -48,6 +48,7 @@ services:
         hostname: haproxy
         container_name: demo-haproxy
         ports:
+            - "7000:7000"
             - "5000:5000"  # Access to the coorinator primary
             - "5001:5001"  # Load-balancing across workers primaries
         command: haproxy
